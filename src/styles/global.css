@@ -1,0 +1,141 @@
+/* Reset y estilos globales */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f8f9fa;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Variables CSS - Paleta Constructora Chilena */
+:root {
+  --primary-color: #1a365d;        /* Azul marino profundo */
+  --secondary-color: #d63031;       /* Rojo chileno vibrante */
+  --accent-color: #f39c12;         /* Naranja dorado más visible */
+  --earth-color: #8b4513;          /* Marrón tierra */
+  --concrete-color: #636e72;       /* Gris concreto */
+  --text-dark: #2d3436;            /* Negro suave */
+  --text-light: #636e72;            /* Gris medio */
+  --text-white: #ffffff;           /* Blanco puro */
+  --white: #ffffff;
+  --light-gray: #f8f9fa;            /* Gris muy claro */
+  --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow-hover: 0 8px 15px rgba(0, 0, 0, 0.2);
+  --gradient-primary: linear-gradient(135deg, #1a365d 0%, #2c5aa0 100%);
+  --gradient-navbar: linear-gradient(135deg, #0f1f2e 0%, #1a365d 100%);
+  --gradient-earth: linear-gradient(135deg, #8b4513 0%, #a0522d 100%);
+  --gradient-accent: linear-gradient(135deg, #f39c12 0%, #e67e22 100%);
+}
+
+/* Utilidades */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.section {
+  padding: 80px 0;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.mb-4 {
+  margin-bottom: 2rem;
+}
+
+.mb-6 {
+  margin-bottom: 3rem;
+}
+
+/* Botones */
+.btn {
+  display: inline-block;
+  padding: 12px 30px;
+  background-color: var(--secondary-color);
+  color: var(--white);
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.btn:hover {
+  background-color: #c0392b;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-hover);
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: var(--text-white);
+  border: 2px solid var(--text-white);
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-outline:hover {
+  background-color: var(--text-white);
+  color: var(--primary-color);
+  border-color: var(--text-white);
+}
+
+/* Grid */
+.grid {
+  display: grid;
+  gap: 2rem;
+}
+
+.grid-2 {
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.grid-3 {
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+/* Animaciones */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 15px;
+  }
+  
+  .section {
+    padding: 60px 0;
+  }
+  
+  .grid-2,
+  .grid-3 {
+    grid-template-columns: 1fr;
+  }
+}
